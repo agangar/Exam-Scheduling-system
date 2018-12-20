@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane fx:id="outer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1286.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esatexam.Main_controller">
+    
+   <children>
+      <HBox prefHeight="135.0" prefWidth="130.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="33.0">
+         <children>
+            <ImageView fx:id="img_exam" fitHeight="135.0" fitWidth="130.0" onMouseClicked="#exams" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/exam.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox fx:id="hbox_student" layoutX="1.0" layoutY="30.0" prefHeight="135.0" prefWidth="130.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fx:id="classroom" fitHeight="135.0" fitWidth="130.0" onMouseClicked="#classroom" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/classrooms.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox_classroom" prefHeight="135.0" prefWidth="130.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fx:id="subjects" fitHeight="135.0" fitWidth="130.0" onMouseClicked="#subject" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/subjects.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox_teachers" prefHeight="135.0" prefWidth="130.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="30.0">
+         <children>
+           <ImageView fx:id="teachers" fitHeight="135.0" fitWidth="130.0" onMouseClicked="#teachers" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/teachers.png" />
+         </image>
+      </ImageView>
+         </children>
+      </HBox>
+      <Separator layoutX="310.0" layoutY="190.0" prefWidth="200.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="170.0" />
+      <AnchorPane fx:id="pane_start" layoutX="75.0" layoutY="240.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="173.0">
+         <children>
+            <Button fx:id="button_seating" alignment="CENTER" layoutX="565.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="100.0" prefWidth="352.0" stylesheets="@button.css" text="Create Seating Arrangement" textAlignment="CENTER" AnchorPane.bottomAnchor="35.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="logo_image" fitHeight="268.0" fitWidth="291.0" layoutX="595.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="50.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_start1" layoutX="11.0" layoutY="182.0" prefHeight="546.0" prefWidth="1400.0" visible="false" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="173.0">
+         <children>
+            <GridPane hgap="25.0" layoutX="22.0" layoutY="30.0" prefHeight="191.0" prefWidth="502.0" vgap="20.0" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="30.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="231.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="729.0" minWidth="10.0" prefWidth="246.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="21.0" prefWidth="220.0" text="Name the Seating Arrangement" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="44.0" prefHeight="17.0" prefWidth="212.0" text="Select Year of Engineering" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="44.0" text="Select Seating type" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="name_seat" prefHeight="25.0" prefWidth="257.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <HBox prefHeight="76.0" prefWidth="232.0" spacing="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                           <children>
+                              <CheckBox fx:id="checkbox_firstYear" mnemonicParsing="false" text="First year">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="checkbox_thirdYear" mnemonicParsing="false" text="Third year">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="61.0" prefWidth="133.0" spacing="15.0">
+                           <children>
+                              <CheckBox fx:id="checkbox_secondYear" mnemonicParsing="false" prefHeight="20.0" prefWidth="121.0" text="Second year">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="checkbox_fourthYear" mnemonicParsing="false" text="Fourth year">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="43.0" prefWidth="230.0" spacing="63.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <CheckBox fx:id="checkbox_single" mnemonicParsing="false" onMouseClicked="#single_click" text="Single">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox_double" mnemonicParsing="false" onMouseClicked="#double_click" prefHeight="20.0" prefWidth="76.0" text="Double">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Label layoutX="952.0" layoutY="14.0" text="Select  Branch of Engineering:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <TableView fx:id="tablebranch" layoutX="952.0" layoutY="40.0" onMouseClicked="#selecteds" prefHeight="274.0" prefWidth="301.0" AnchorPane.rightAnchor="33.0">
+              <columns>
+                <TableColumn fx:id="shortform" prefWidth="99.0" text="Short name" />
+                <TableColumn fx:id="name" prefWidth="120.0" text="Branch Name" />
+                  <TableColumn fx:id="color" minWidth="0.0" text="Color" />
+                  <TableColumn fx:id="branchid" prefWidth="91.0" text="id" visible="false" />
+              </columns>
+            </TableView>
+            <ImageView fx:id="image" fitHeight="251.0" fitWidth="510.0" layoutX="14.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" />
+            <GridPane layoutX="557.0" layoutY="40.0" prefHeight="274.0" prefWidth="352.0" style="-fx-border-color: black;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="240.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Short Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="Branch Name" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="Color" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="input_shortform" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="input_name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="input_color" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="button_insertbranch" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#inserts" text="Insert" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="button_updatebranch" mnemonicParsing="false" onMouseClicked="#updates" text="Update">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="button_deletebranch" mnemonicParsing="false" onMouseClicked="#deletes" text="Delete">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </GridPane>
+            <VBox alignment="CENTER" layoutX="593.0" layoutY="326.0" AnchorPane.bottomAnchor="50.0">
+               <children>
+                  <Button fx:id="button_panedata" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#nexts" prefHeight="49.0" prefWidth="121.0" text="Next">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_start2" layoutX="5.0" layoutY="172.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="172.0">
+         <children>
+            <TableView fx:id="class_select" layoutY="6.0" onMouseClicked="#handleClassAction" onMouseEntered="#handleClassAction" onMouseExited="#handleClassAction" onMouseMoved="#handleClassAction" prefHeight="469.0" prefWidth="808.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="466.0" AnchorPane.topAnchor="20.0">
+               <columns>
+                  <TableColumn fx:id="select_column" prefWidth="135.0" text="Select" />
+                  <TableColumn fx:id="serialno_column" minWidth="0.0" prefWidth="88.0" text="Sr.no" />
+                  <TableColumn fx:id="roomno_column" prefWidth="288.0" text="Classroom Number" />
+                  <TableColumn fx:id="year_column" prefWidth="135.0" text="Year" />
+                  <TableColumn fx:id="branch_column" prefWidth="135.0" text="Branch" />
+                  <TableColumn fx:id="div_column" prefWidth="135.0" text="Division" />
+               </columns>
+            </TableView>
+            <VBox alignment="CENTER" layoutX="622.0" layoutY="486.0" AnchorPane.bottomAnchor="30.0" />
+            <Label fx:id="label2" layoutX="844.0" layoutY="147.0" prefHeight="76.0" prefWidth="322.0" text="PLEASE SELECT REQUIRED NUMBER OF CLASSES" AnchorPane.rightAnchor="118.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="button_allocateDuties" layoutX="914.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#teacherf" prefHeight="90.0" prefWidth="345.0" text="Allocate Duties to Teachers" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_createSeating" layoutX="868.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#Seatingf" prefHeight="90.0" prefWidth="345.0" text="Create Seating Arrangement" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="label" layoutX="844.0" layoutY="66.0" prefHeight="90.0" prefWidth="301.0" text="Database incomplete please fill valid details." AnchorPane.rightAnchor="139.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_start4" layoutY="173.0" prefHeight="539.0" prefWidth="932.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <Label layoutX="42.0" layoutY="27.0" text="Please fill and check the folllowing details to continue:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+              <Button fx:id="button_paneclassroom" alignment="CENTER" layoutX="852.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#selectClass" text="Next" AnchorPane.bottomAnchor="45.0" />
+            <ImageView fx:id="img_classroom" fitHeight="135.0" fitWidth="130.0" layoutX="77.0" layoutY="107.0" onMouseClicked="#classroom" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img_subject" fitHeight="135.0" fitWidth="130.0" layoutX="77.0" layoutY="316.0" onMouseClicked="#subject" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img_teacher" fitHeight="135.0" fitWidth="130.0" layoutX="251.0" layoutY="107.0" onMouseClicked="#teachers" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img_exam" fitHeight="135.0" fitWidth="130.0" layoutX="251.0" layoutY="316.0" onMouseClicked="#exams" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      
+   </children>
+</AnchorPane>

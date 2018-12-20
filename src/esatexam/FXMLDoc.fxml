@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<AnchorPane fx:id="paneTeacher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esatexam.FXMLDocumentController">
+   <children>
+      <Label layoutX="29.0" layoutY="69.0" text="Teacher Name :" />
+      <Label layoutX="54.0" layoutY="127.0" text="Senority :" />
+      <Label layoutX="39.0" layoutY="184.0" text="Availability :" />
+      <TextField fx:id="text_teachername" layoutX="136.0" layoutY="65.0" />
+      <ChoiceBox fx:id="choice_senority" layoutX="136.0" layoutY="123.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choice_available" layoutX="136.0" layoutY="180.0" prefWidth="150.0" />
+      <Label layoutX="56.0" layoutY="245.0" text="Subject :" />
+      <ChoiceBox fx:id="choice_subject" layoutX="136.0" layoutY="241.0" prefWidth="150.0" />
+      <TableView fx:id="teacherTable" layoutX="314.0" layoutY="26.0" onMouseClicked="#selecteds" prefHeight="358.0" prefWidth="483.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="42.0" text="Id" />
+          <TableColumn fx:id="table_name" prefWidth="160.0" text="Teacher name" />
+            <TableColumn fx:id="table_senority" prefWidth="74.0" text="Senority" />
+            <TableColumn fx:id="table_availability" prefWidth="94.0" text="Availability" />
+            <TableColumn fx:id="table_subject" prefWidth="112.0" text="Subject" />
+        </columns>
+      </TableView>
+      <Button fx:id="insert" layoutX="39.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#insert" prefHeight="40.0" prefWidth="70.0" text="Insert" />
+      <Button fx:id="update" layoutX="129.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#updates" prefHeight="40.0" prefWidth="70.0" text="Update" />
+      <Button fx:id="delete" layoutX="223.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#deletes" prefHeight="40.0" prefWidth="70.0" text="Delete" />
+   </children>
+</AnchorPane>
